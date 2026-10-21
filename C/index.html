@@ -1,0 +1,54 @@
+<!doctype html><html lang="it"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5ROSSO CASA — C · Il negozio come esperienza di scoperta</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171210;--rosso:#E0121F;--chiaro:#f4ebe0}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity}body{margin:0;background:var(--bg);color:var(--chiaro);font:17px/1.5 'Bricolage Grotesque',system-ui,sans-serif}
+img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit}
+.scene{position:relative;min-height:100svh;scroll-snap-align:start;overflow:hidden}
+.logo{position:fixed;top:16px;left:18px;z-index:20;width:52px;mix-blend-mode:normal}.logo img{height:auto}
+.dots{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:20;display:grid;gap:12px}.dots a{width:11px;height:11px;border-radius:50%;border:2px solid #fff;display:block;background:#0008}
+.big{font:700 clamp(54px,11vw,190px)/.88 'Bricolage Grotesque';letter-spacing:-.03em;margin:0}.hand{font:600 clamp(26px,3vw,40px) Caveat;color:#ffb3b3}
+/* 0 apertura: un solo macro-dettaglio a tutto schermo */
+.s0 img{position:absolute;inset:0}.s0 .t{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:flex-end;text-shadow:0 1px 12px #000a}
+.s0 .t b{font-size:18px}.s0 .t span{font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+/* 1 scala crescente: tre dettagli sempre piu grandi */
+.s1{padding:90px 4vw 0}.s1 .row{display:grid;grid-template-columns:2fr 3fr 5fr;gap:12px;align-items:end;margin:40px 0 12px}.s1 .row img{aspect-ratio:1}.s1 .row div:nth-child(1){align-self:start}
+.wide{position:relative;margin:12px -4vw 0}.wide img{aspect-ratio:21/9}.wide p{position:absolute;left:4vw;bottom:14px;background:var(--bg);padding:6px 12px;margin:0}
+/* 2 il rosso: collage sovrapposto */
+.s2{background:#240a0b;padding:90px 4vw}.s2 .collage{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(8,9vw);gap:0;margin-top:30px}
+.s2 .collage div{overflow:hidden;box-shadow:0 14px 40px #0008}
+.c1{grid-column:1/8;grid-row:1/7}.c2{grid-column:6/10;grid-row:4/9;z-index:2}.c3{grid-column:9/13;grid-row:1/5}.c4{grid-column:10/13;grid-row:5/9;z-index:3}
+.s2 p.n{max-width:360px;margin:20px 0 0 auto}
+/* 3 cambio di scala verso il basso: pavimento */
+.s3{padding:90px 0 0}.s3 .h{padding:0 4vw}.s3 .full img{aspect-ratio:3/2;max-height:90vh}.s3 .three{display:grid;grid-template-columns:repeat(3,1fr)}.s3 .three img{aspect-ratio:4/5}
+/* 4 chiusura: la facciata e le informazioni */
+.s4{display:grid;grid-template-columns:1.3fr 1fr}.s4 .ph{position:relative;min-height:100svh}.s4 .ph img{position:absolute;inset:0}
+.s4 .in{padding:90px 34px 34px;display:flex;flex-direction:column;justify-content:center;gap:14px;background:var(--chiaro);color:#241f1d}
+.btn{display:inline-block;background:var(--rosso);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px}.map{background:#d9cdbb;min-height:160px;display:grid;place-items:center;color:#7a7063;font-size:14px}
+@media(max-width:800px){
+ html{scroll-snap-type:none}.dots{display:none}.logo{width:42px}.s0 .t{flex-direction:column;align-items:flex-start;gap:6px}
+ .s1{padding-top:70px}.s1 .row{grid-template-columns:1fr 1fr;gap:8px}.s1 .row div:nth-child(3){grid-column:1/3;grid-row:1}.s1 .row div:nth-child(1){grid-row:2}.s1 .row div:nth-child(2){grid-row:2;align-self:start}.wide img{aspect-ratio:4/3}
+ .s2{padding:70px 4vw}.s2 .collage{display:block}.s2 .collage div{margin-top:-10vw;position:relative}.s2 .collage div:first-child{margin-top:0}.c1{width:92%}.c2{width:60%;margin-left:36%}.c3{width:70%}.c4{width:52%;margin-left:44%}.c1 img,.c3 img{aspect-ratio:1}.c2 img,.c4 img{aspect-ratio:4/5}
+ .s3 .three{grid-template-columns:1fr 1fr 1fr}.s4{display:block}.s4 .ph{min-height:70svh}.s4 .in{padding:36px 20px}}
+</style></head><body>
+<a class="logo" href="#s0"><img src="../img/logo_web_320.png" alt="Logo 5 Rosso Casa"></a>
+<nav class="dots" aria-label="Capitoli"><a href="#s0" title="Inizio"></a><a href="#s1" title="Parole a mano"></a><a href="#s2" title="Il rosso"></a><a href="#s3" title="Sotto i piedi"></a><a href="#s4" title="Vieni a trovarci"></a></nav>
+
+<section class="scene s0" id="s0"><img src="../img/dett_popcorn.jpg" alt="Dettaglio di una ciotola bianca con la scritta popcorn e un cuore rosso"><div class="t"><b>5 Rosso Casa · Firenze</b><span>scorri ↓</span></div></section>
+
+<section class="scene s1" id="s1"><div class="hand">capitolo 1</div><h2 class="big">Parole<br>a mano.</h2>
+<div class="row"><div><img src="../img/dett_cuore_speciale.jpg" alt="Piatto a forma di cuore con la scritta ogni giorno è speciale"></div><div><img src="../img/dett_sognare.jpg" alt="Tazza di vetro con la frase non smettere mai di sognare"></div><div><img src="../img/dett_senti_profumo.jpg" alt="Barattolo di vetro con la scritta senti che profumo"></div></div>
+<div class="wide"><img src="../img/simpleday_barattoli_biscotto.jpg" alt="Barattoli di vetro con frasi scritte a mano" style="object-position:50% 55%"><p>Simple Day: ceramica e vetro con frasi scritte a mano. [testo da approvare]</p></div></section>
+
+<section class="scene s2" id="s2"><div class="hand">capitolo 2</div><h2 class="big">Il rosso<br>torna sempre.</h2>
+<div class="collage"><div class="c1"><img src="../img/dett_rosso_bicchieri.jpg" alt="Bicchieri di vetro rosso"></div><div class="c2"><img src="../img/hh_bollitore_rosso.jpg" alt="Bollitore rosso"></div><div class="c3"><img src="../img/mosaico_tessili_rossi.jpg" alt="Tessili rossi e tartan"></div><div class="c4"><img src="../img/sacchetti_5rossocasa.jpg" alt="Sacchetti regalo con la scritta 5 Rosso Casa"></div></div>
+<p class="n">Dal bollitore al sacchetto: un filo rosso che attraversa gli scaffali.</p></section>
+
+<section class="scene s3" id="s3"><div class="h"><div class="hand">capitolo 3</div><h2 class="big">Sotto<br>i piedi.</h2></div>
+<div class="full" style="margin-top:36px"><img src="../img/zerbini_tavolo.jpg" alt="Zerbini con cani, gatti, ricci e fiori disposti su un tavolo"></div>
+<div class="three"><img src="../img/passatoie.jpg" alt="Passatoie con cani e gatti" style="aspect-ratio:4/5"><img src="../img/mosaico_zerbino_albero.jpg" alt="Zerbino albero della vita" style="aspect-ratio:4/5"><img src="../img/zerbini_gomma.jpg" alt="Zerbini in gomma con piante"></div></section>
+
+<section class="scene s4" id="s4"><div class="ph"><img src="../img/hero_facciata_mobile.jpg" alt="Ingresso del negozio 5 Rosso Casa a Firenze" style="object-position:50% 30%"></div>
+<div class="in"><div class="hand" style="color:var(--rosso)">ultimo capitolo</div><h2 style="font:700 clamp(36px,4vw,56px)/1 'Bricolage Grotesque';margin:0">Il resto, dal vivo.</h2><p>[Indirizzo da confermare], Firenze<br>Lun–ven 9–13 · 16:30–19:30 · sab 9–13<br><small>(orari dal cartello, da confermare)</small></p><p><a class="btn" href="#">Scrivici su WhatsApp</a></p><p><a href="#">Instagram</a> · <a href="#">Facebook</a></p><div class="map">Mappa (blocco mappa SuperSite)</div></div></section>
+</body></html>

@@ -1,0 +1,90 @@
+<!doctype html><html lang="it"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5ROSSO CASA — B · Il negozio come universo di prodotti</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--rosso:#C4000F;--ink:#16120f;--riga:#16120f;--muto:#6a635d;--fondo:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--fondo);font:16px/1.5 Archivo,system-ui,sans-serif}
+img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-decoration:none}
+.app{display:grid;grid-template-columns:300px 1fr;min-height:100vh}
+/* colonna indice fissa: l'architettura è l'indice */
+.rail{position:sticky;top:0;height:100vh;border-right:1px solid var(--riga);padding:24px;display:flex;flex-direction:column;gap:18px;overflow:auto}
+.rail img.logo{width:64px;height:auto}.rail h1{font:700 30px/1.05 'Archivo Narrow',sans-serif;text-transform:uppercase;margin:0}
+.rail ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--riga)}.rail li a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #0002;font-weight:500}
+.rail li a span{font:700 13px 'Archivo Narrow';color:var(--rosso);width:24px;padding-top:3px}.rail li a:hover{background:#f4efe9}
+.rail .hrs{margin-top:auto;font-size:13px;color:var(--muto);border-top:1px solid var(--riga);padding-top:12px}
+.chips{display:none}
+main{min-width:0}
+/* primo schermo: mosaico fotografico rigido con gutter sottili */
+.bento{height:100vh;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:2px;background:var(--riga)}
+.bento a{position:relative;overflow:hidden;background:#fff}.bento a b{position:absolute;left:0;bottom:0;background:#fff;font:700 12px 'Archivo Narrow';text-transform:uppercase;letter-spacing:.08em;padding:4px 8px}
+.bento a:nth-child(1){grid-column:1/4;grid-row:1/4}.bento a:nth-child(2){grid-column:4/7;grid-row:1/3}.bento a:nth-child(3){grid-column:4/5;grid-row:3/5}
+.bento a:nth-child(4){grid-column:5/7;grid-row:3/5}.bento a:nth-child(5){grid-column:1/2;grid-row:4/5}.bento a:nth-child(6){grid-column:2/4;grid-row:4/5}
+/* famiglie: modulo ripetuto 1 grande + 2 piccole */
+.fam{border-top:1px solid var(--riga);padding:0}
+.fam header{display:grid;grid-template-columns:90px 1fr 1.2fr;gap:20px;align-items:baseline;padding:22px 28px;border-bottom:1px solid var(--riga)}
+.fam header .n{font:700 44px/1 'Archivo Narrow';color:var(--rosso)}.fam header h2{font:700 34px/1 'Archivo Narrow';text-transform:uppercase;margin:0}.fam header p{margin:0;color:var(--muto)}
+.mod{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:1fr 1fr;gap:2px;background:var(--riga)}
+.mod figure{margin:0;background:#fff;position:relative;overflow:hidden}.mod .lead{grid-row:1/3;aspect-ratio:1/1}.mod figure img{position:absolute;inset:0}.mod .s{min-height:0}
+.mod .lead.w{aspect-ratio:7/5}
+figcaption{position:absolute;left:0;bottom:0;background:#fff;padding:5px 10px;font:500 13px 'Archivo Narrow';text-transform:uppercase;letter-spacing:.06em}
+.linee{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--riga)}.linee div{padding:28px;border-right:1px solid var(--riga)}.linee div:last-child{border:0}.linee h3{font:700 30px 'Archivo Narrow';text-transform:uppercase;margin:0 0 6px}
+.negozio{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:28px;border-top:1px solid var(--riga);align-items:center}.negozio img{aspect-ratio:4/5}
+.dove{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--riga);background:var(--ink);color:#f5eee6}.dove>div{padding:30px}.dove .map{background:#33302d;display:grid;place-items:center;color:#aaa;min-height:220px}
+.btn{display:inline-block;background:var(--rosso);color:#fff;padding:11px 18px;font-weight:700}
+@media(max-width:860px){
+ .app{display:block}.rail{display:none}
+ .chips{display:flex;gap:8px;overflow-x:auto;position:sticky;top:0;z-index:9;background:#fff;border-bottom:1px solid var(--riga);padding:10px 12px;align-items:center}
+ .chips img{width:34px;height:34px;flex:none}.chips a{flex:none;border:1px solid var(--riga);padding:6px 12px;font:700 13px 'Archivo Narrow';text-transform:uppercase}
+ .bento{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:44vw}.bento a:nth-child(n){grid-column:auto;grid-row:auto}.bento a:nth-child(1){grid-column:1/3;grid-row:span 2}
+ .fam header{grid-template-columns:44px 1fr;padding:16px}.fam header p{grid-column:2}.fam header .n{font-size:30px}.fam header h2{font-size:26px}
+ .mod{grid-template-columns:1fr 1fr;grid-template-rows:auto}.mod .lead,.mod .lead.w{grid-column:1/3;grid-row:auto;aspect-ratio:1}.mod .s{aspect-ratio:1;min-height:auto}.bento a:nth-child(6){grid-column:1/3}.mod .lead.w{aspect-ratio:3/2}
+ .linee,.dove{grid-template-columns:1fr}.linee div{border-right:0;border-bottom:1px solid var(--riga)}.negozio{grid-template-columns:110px 1fr;padding:16px}}
+</style></head><body>
+<div class="app">
+<aside class="rail"><img class="logo" src="../img/logo_web_320.png" alt="Logo 5 Rosso Casa"><h1>Tutto per la casa, in sei famiglie.</h1>
+<ol><li><a href="#f1"><span>01</span>Tavola</a></li><li><a href="#f2"><span>02</span>Cucina</a></li><li><a href="#f3"><span>03</span>Dispensa e vetro</a></li><li><a href="#f4"><span>04</span>Tessili</a></li><li><a href="#f5"><span>05</span>Ingresso</a></li><li><a href="#f6"><span>06</span>Regali e dettagli</a></li><li><a href="#linee"><span>+</span>Le due linee</a></li><li><a href="#dove"><span>→</span>Dove siamo</a></li></ol>
+<div class="hrs"><b>5 Rosso Casa · Firenze</b><br>Lun–ven 9–13 · 16:30–19:30<br>Sab 9–13</div></aside>
+<main>
+<div class="chips"><img src="../img/logo_web_320.png" alt="Logo" style="height:34px"><a href="#f1">01 Tavola</a><a href="#f2">02 Cucina</a><a href="#f3">03 Dispensa</a><a href="#f4">04 Tessili</a><a href="#f5">05 Ingresso</a><a href="#f6">06 Regali</a><a href="#dove">Dove</a></div>
+<div class="bento">
+<a href="#f2"><img src="../img/hh_bollitori_rosso_grigio.jpg" alt="Bollitori rosso e grigio"><b>Cucina</b></a>
+<a href="#f1"><img src="../img/mosaico_bicchieri_rossi.jpg" alt="Bicchieri rossi in vetro"><b>Tavola</b></a>
+<a href="#f4"><img src="../img/mosaico_tessili_autunno.jpg" alt="Tessili autunnali e tazze"><b>Tessili</b></a>
+<a href="#f5"><img src="../img/mosaico_zerbino_albero.jpg" alt="Zerbino con albero"><b>Ingresso</b></a>
+<a href="#f3"><img src="../img/mosaico_barattoli_cuori.jpg" alt="Barattoli con cuori"><b>Dispensa</b></a>
+<a href="#f6"><img src="../img/simpleday_piatti_cosa_c_e_di_buono.jpg" alt="Piatti con scritte"><b>Regali</b></a></div>
+
+<section class="fam" id="f1"><header><div class="n">01</div><h2>Tavola</h2><p>Piatti, ciotole e bicchieri per tutti i giorni.</p></header><div class="mod">
+<figure class="lead"><img src="../img/mosaico_bicchieri_rossi.jpg" alt="Bicchieri rossi in vetro"><figcaption>Bicchieri in vetro rosso</figcaption></figure>
+<figure class="s"><img src="../img/mosaico_piatti_pesci.jpg" alt="Piatti con disegni di pesci"><figcaption>Piatti con pesci</figcaption></figure>
+<figure class="s"><img src="../img/simpleday_ciotole_scritte.jpg" alt="Ciotole con scritte" style="object-position:50% 60%"><figcaption>Ciotole con scritte</figcaption></figure></div></section>
+
+<section class="fam" id="f2"><header><div class="n">02</div><h2>Cucina</h2><p>Bollitori, borracce termiche, olio e aceto.</p></header><div class="mod">
+<figure class="lead w"><img src="../img/hh_bollitori_rosso_grigio.jpg" alt="Bollitori rosso e grigio"><figcaption>Bollitori</figcaption></figure>
+<figure class="s"><img src="../img/hh_borracce_termiche.jpg" alt="Borracce termiche H&H" style="object-position:50% 40%"><figcaption>Borracce termiche</figcaption></figure>
+<figure class="s"><img src="../img/simpleday_olio_aceto_sale_pepe.jpg" alt="Olio, aceto, sale e pepe" style="object-position:50% 70%"><figcaption>Olio · aceto · sale · pepe</figcaption></figure></div></section>
+
+<section class="fam" id="f3"><header><div class="n">03</div><h2>Dispensa e vetro</h2><p>Barattoli, teiere e tazze con frasi a mano.</p></header><div class="mod">
+<figure class="lead w"><img src="../img/simpleday_barattoli_biscotto.jpg" alt="Barattoli di vetro con frasi"><figcaption>Barattoli con frasi</figcaption></figure>
+<figure class="s"><img src="../img/mosaico_barattoli_cuori.jpg" alt="Barattoli con cuori"><figcaption>Barattoli con cuori</figcaption></figure>
+<figure class="s"><img src="../img/teiera_goditi.jpg" alt="Teiera di vetro"><figcaption>Teiera di vetro</figcaption></figure></div></section>
+
+<section class="fam" id="f4"><header><div class="n">04</div><h2>Tessili</h2><p>Presine, strofinacci e tartan per la cucina.</p></header><div class="mod">
+<figure class="lead"><img src="../img/mosaico_tessili_autunno.jpg" alt="Tessili autunnali in cesto"><figcaption>Tessili d'autunno</figcaption></figure>
+<figure class="s"><img src="../img/mosaico_tessili_rossi.jpg" alt="Tessili rossi e tartan"><figcaption>Rossi e tartan</figcaption></figure>
+<figure class="s"><img src="../img/vetrina_lanterna.jpg" alt="Presine e lanterna" style="object-position:50% 60%"><figcaption>Presine e lanterne</figcaption></figure></div></section>
+
+<section class="fam" id="f5"><header><div class="n">05</div><h2>Ingresso</h2><p>Zerbini e passatoie, da un lato all'altro della porta.</p></header><div class="mod">
+<figure class="lead"><img src="../img/mosaico_zerbino_albero.jpg" alt="Zerbino albero della vita"><figcaption>Albero della vita</figcaption></figure>
+<figure class="s"><img src="../img/zerbini_gomma.jpg" alt="Zerbini in gomma con piante" style="object-position:50% 40%"><figcaption>Zerbini in gomma</figcaption></figure>
+<figure class="s"><img src="../img/passatoie.jpg" alt="Passatoie con cani e gatti"><figcaption>Passatoie</figcaption></figure></div></section>
+
+<section class="fam" id="f6"><header><div class="n">06</div><h2>Regali e dettagli</h2><p>Piccoli oggetti con una frase, da regalare.</p></header><div class="mod">
+<figure class="lead"><img src="../img/simpleday_piatti_cosa_c_e_di_buono.jpg" alt="Piatti con scritte"><figcaption>Piatti con scritte</figcaption></figure>
+<figure class="s"><img src="../img/casetta_appoggia_qui.jpg" alt="Appoggiapentola a forma di casetta"><figcaption>Appoggiapentola</figcaption></figure>
+<figure class="s"><img src="../img/tazza_sognare.jpg" alt="Tazza di vetro con frase"><figcaption>Tazza di vetro</figcaption></figure></div></section>
+
+<section class="linee" id="linee"><div><h3>Simple Day</h3><p>Ceramiche e vetri con frasi scritte a mano.</p></div><div><h3>H&amp;H</h3><p>Pentole, bollitori e borracce.</p></div></section>
+<section class="negozio"><img src="../img/netta_con_pentole.jpg" alt="Netta, titolare del negozio"><div><b>Il negozio.</b> [Testo da approvare] Non è un catalogo: i prodotti si vedono dal vivo. Chiedi a Netta.</div></section>
+<section class="dove" id="dove"><div><h2 style="font:700 34px 'Archivo Narrow';text-transform:uppercase;margin:0 0 10px">Dove siamo</h2><p>[Indirizzo da confermare], Firenze<br>Lun–ven 9–13 · 16:30–19:30 · sab 9–13<br><small>(orari dal cartello, da confermare)</small></p><p><a class="btn" href="#">WhatsApp</a> &nbsp; <a href="#" style="text-decoration:underline">Instagram</a> · <a href="#" style="text-decoration:underline">Facebook</a></p></div><div class="map">Mappa (blocco mappa SuperSite)</div></section>
+</main></div></body></html>

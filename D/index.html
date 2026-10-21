@@ -1,0 +1,78 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>5ROSSO CASA — D · La vetrina composta</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&family=Caveat+Brush&display=swap" rel="stylesheet">
+<style>
+/* D: la pagina e' una vetrina composta. Apertura = testo + collage di negozio e prodotti; poi un mosaico a colonne (come la galleria Mosaico di SuperSite); poi una sola fascia rossa per il negozio e Netta; poi le informazioni. */
+:root{--fondo:#EFEEE9;--pannello:#fff;--ink:#1E1B1A;--muto:#645e59;--rosso:#C4000F;--petrolio:#1F4E5A;--riga:#d8d5cd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--fondo);color:var(--ink);font:17px/1.55 Figtree,system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.top{position:sticky;top:0;z-index:20;background:var(--fondo);border-bottom:1px solid var(--riga)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:68px}.top img{width:46px}.top nav{display:flex;gap:22px;margin-left:auto;font-weight:500;font-size:15px}.top nav a{text-decoration:none}
+.btn{display:inline-block;background:var(--rosso);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px}.btn.o{background:none;color:var(--rosso);border:2px solid var(--rosso);padding:11px 20px}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--petrolio);font-weight:700;margin:0 0 14px}
+h1,h2{font-family:'Young Serif',Georgia,serif;font-weight:400;line-height:1.05;margin:0}h1{font-size:clamp(40px,4.7vw,68px);text-wrap:balance}h2{font-size:clamp(32px,3.8vw,48px)}
+.tag{font-family:'Caveat Brush',cursive;color:var(--rosso);font-size:24px;line-height:1}
+/* 1 apertura */
+.open .wrap{display:grid;grid-template-columns:6fr 6fr;gap:40px;align-items:center;padding-top:34px;padding-bottom:48px}
+.open p.lead{font-size:20px;max-width:30em;margin:20px 0 22px}.hrs{display:inline-block;background:var(--pannello);border-left:5px solid var(--rosso);padding:10px 16px;margin-bottom:22px;font-size:15px}.hrs small{display:block;color:var(--muto)}
+.open .cta{display:flex;gap:10px;flex-wrap:wrap}.brands{margin-top:22px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;color:var(--muto);font-size:15px}
+.open .collage img{width:100%}
+/* 2 mosaico a colonne */
+.sc{padding:34px 0 70px}.sc header{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:26px;flex-wrap:wrap}.sc header p{max-width:34em;margin:0;color:var(--muto)}
+.mosaic{column-count:3;column-gap:14px}.mosaic>*{break-inside:avoid;margin:0 0 14px;display:block}
+.mosaic figure{position:relative;background:var(--pannello)}.mosaic figure img{width:100%}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:var(--pannello);padding:4px 10px 5px;font:400 22px/1 'Caveat Brush',cursive;color:var(--ink)}
+.note{background:var(--pannello);border:2px solid var(--rosso);padding:26px 22px}.note b{font:400 34px/1.1 'Young Serif',serif;display:block;margin-bottom:10px}.note span{color:var(--muto);font-size:15px}
+/* 3 negozio: unica fascia piena */
+.shop{background:var(--rosso);color:#fff;padding:46px 0}.shop .wrap{display:grid;grid-template-columns:200px 1fr 220px;gap:36px;align-items:center}
+.shop .a img{aspect-ratio:1;object-fit:cover;border-radius:50%}.shop h2{margin-bottom:12px}.shop p{margin:0;max-width:34em;font-size:18px}.shop .n img{aspect-ratio:4/5;object-fit:cover;border:6px solid #fff}.shop .n small{display:block;margin-top:8px;font-size:14px;opacity:.9}
+/* 4 dove */
+.dove{padding:70px 0}.dove .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+table{width:100%;border-collapse:collapse;margin:14px 0}td{padding:8px 0;border-bottom:1px solid var(--riga)}td:last-child{text-align:right}
+.map{background:#dcd8cf;min-height:280px;display:grid;place-items:center;color:var(--muto);font-size:14px}
+.social{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}.social a{font-weight:700}
+footer{padding:24px;text-align:center;font-size:13px;color:var(--muto)}
+.bar{display:none}
+@media(max-width:860px){
+ .open .cta{display:none}.top nav{display:none}.top .btn{margin-left:auto;padding:10px 16px;font-size:14px}
+ .open .wrap,.shop .wrap,.dove .wrap{grid-template-columns:1fr;gap:26px}.open .wrap{padding-top:22px}
+ .mosaic{column-count:2;column-gap:10px}.mosaic>*{margin-bottom:10px}.mosaic figcaption{font-size:18px;left:6px;bottom:6px}
+ .shop .a img{width:120px}.shop .n{max-width:200px}.dove{padding:44px 0 90px}.note b{font-size:26px}
+ .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:#fff;padding:10px 16px;gap:10px}.bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:10px;border-radius:999px;background:var(--rosso)}.bar a+a{background:none;border:2px solid #fff}}
+</style></head><body>
+<header class="top"><div class="wrap"><a href="#"><img src="../img/logo_web_320.png" alt="Logo 5 Rosso Casa"></a><nav><a href="#scaffale">Dallo scaffale</a><a href="#negozio">Il negozio</a><a href="#dove">Dove siamo</a></nav><a class="btn" href="#dove">Vieni a trovarci</a></div></header>
+
+<section class="open"><div class="wrap"><div class="t">
+<p class="eyebrow">Articoli per la casa · Firenze</p><h1>Il tuo negozietto di quartiere.</h1>
+<p class="lead">Cucina, tavola, tessili, zerbini e idee regalo, scelti uno per uno. Da vedere e da toccare dal vivo.</p>
+<div class="hrs"><b>Oggi in negozio</b> · lun–ven 9–13 e 16:30–19:30 · sab 9–13<small>orari dal cartello in vetrina, da confermare</small></div>
+<div class="cta"><a class="btn" href="#dove">Scrivici su WhatsApp</a><a class="btn o" href="#dove">Indicazioni</a></div>
+<div class="brands"><span class="tag">con le linee</span><b>Simple Day</b><b>H&amp;H</b></div></div>
+<div class="collage"><img src="../img/hero_vetrina_D.jpg" alt="Composizione di foto: l'ingresso del negozio, un bollitore rosso, bicchieri rossi, ciotole con scritte e bottiglie di olio e aceto"></div></div></section>
+
+<section class="sc" id="scaffale"><div class="wrap"><header><div><p class="eyebrow">Dallo scaffale</p><h2>Poche cose, ben scelte.</h2></div><p>Dalla cucina alla porta di casa: oggetti che si usano ogni giorno, con qualche frase scritta a mano e molto rosso. [Testo da approvare]</p></header>
+<div class="mosaic">
+<figure><img src="../img/hh_borracce_termiche.jpg" alt="Borracce termiche H&H" ><figcaption>borracce H&amp;H</figcaption></figure>
+<figure><img src="../img/mosaico_piatti_pesci.jpg" alt="Piatti con disegni di pesci"><figcaption>piatti con pesci</figcaption></figure>
+<div class="note"><b>Un biscotto tira l'altro.</b><span>Le frasi scritte a mano su vetro e ceramica sono della linea Simple Day.</span></div>
+<figure><img src="../img/simpleday_barattoli_biscotto.jpg" alt="Barattoli di vetro con frasi scritte a mano"><figcaption>barattoli</figcaption></figure>
+<figure><img src="../img/mosaico_tessili_autunno.jpg" alt="Tessili autunnali e tazze in un cesto"><figcaption>tessili d'autunno</figcaption></figure>
+<figure><img src="../img/sacchetti_5rossocasa.jpg" alt="Sacchetti regalo con la scritta 5 Rosso Casa"><figcaption>per regalare</figcaption></figure>
+<figure><img src="../img/zerbini_tavolo.jpg" alt="Zerbini con cani, gatti e fiori"><figcaption>zerbini</figcaption></figure>
+<figure><img src="../img/teiera_goditi.jpg" alt="Teiera di vetro con la frase goditi le piccole cose"><figcaption>teiera</figcaption></figure>
+<figure><img src="../img/simpleday_piatti_cosa_c_e_di_buono.jpg" alt="Piatti con la scritta cosa c'è di buono oggi"><figcaption>cosa c'è di buono oggi</figcaption></figure>
+<figure><img src="../img/mosaico_tessili_rossi.jpg" alt="Tessili rossi e a quadri"><figcaption>rosso e tartan</figcaption></figure>
+</div></div></section>
+
+<section class="shop" id="negozio"><div class="wrap"><div class="a"><img src="../img/adesivo_logo_vetrina.jpg" alt="Adesivo con il logo 5 Rosso Casa sulla vetrina"></div>
+<div><h2>Il negozio, e Netta.</h2><p>[Testo da approvare] Un negozio di quartiere vero: entri per una cosa e ne scopri altre tre. Netta sceglie ogni articolo e ti aiuta a trovare quello giusto.</p></div>
+<div class="n"><img src="../img/netta_con_pentole.jpg" alt="Netta, titolare del negozio, sorride tra le pentole"><small>Netta, in negozio</small></div></div></section>
+
+<section class="dove" id="dove"><div class="wrap"><div><p class="eyebrow">Dove siamo</p><h2>Passa a trovarci.</h2><p style="margin:14px 0 0">[Indirizzo da confermare], Firenze</p>
+<table><tr><td>Lunedì–venerdì</td><td>9–13 · 16:30–19:30</td></tr><tr><td>Sabato</td><td>9–13</td></tr></table><small style="color:var(--muto)">orari dal cartello in vetrina, da confermare</small>
+<p style="margin-top:18px"><a class="btn" href="#">WhatsApp</a></p><div class="social"><a href="#">Instagram</a><a href="#">Facebook</a></div></div>
+<div class="map">Mappa (blocco mappa SuperSite)</div></div></section>
+<footer>© 5ROSSO CASA · prototipo D, bozza di studio</footer>
+<div class="bar"><a href="#dove">WhatsApp</a><a href="#dove">Indicazioni</a></div>
+</body></html>
