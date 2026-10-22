@@ -8,11 +8,11 @@ img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-d
 .app{display:grid;grid-template-columns:300px 1fr;min-height:100vh}
 /* colonna indice fissa: l'architettura è l'indice */
 .rail{position:sticky;top:0;height:100vh;border-right:1px solid var(--riga);padding:24px;display:flex;flex-direction:column;gap:18px;overflow:auto}
-.rail img.logo{width:64px;height:auto}.rail h1{font:700 30px/1.05 'Archivo Narrow',sans-serif;text-transform:uppercase;margin:0}
+.rail img.logo{width:136px;height:auto}.rail h1{font:700 30px/1.05 'Archivo Narrow',sans-serif;text-transform:uppercase;margin:0}
 .rail ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--riga)}.rail li a{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #0002;font-weight:500}
 .rail li a span{font:700 13px 'Archivo Narrow';color:var(--rosso);width:24px;padding-top:3px}.rail li a:hover{background:#f4efe9}
 .rail .hrs{margin-top:auto;font-size:13px;color:var(--muto);border-top:1px solid var(--riga);padding-top:12px}
-.chips{display:none}
+.chips{display:none}.brand{display:none}
 main{min-width:0}
 /* primo schermo: mosaico fotografico rigido con gutter sottili */
 .bento{height:100vh;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:2px;background:var(--riga)}
@@ -28,24 +28,26 @@ main{min-width:0}
 .mod .lead.w{aspect-ratio:7/5}
 figcaption{position:absolute;left:0;bottom:0;background:#fff;padding:5px 10px;font:500 13px 'Archivo Narrow';text-transform:uppercase;letter-spacing:.06em}
 .linee{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--riga)}.linee div{padding:28px;border-right:1px solid var(--riga)}.linee div:last-child{border:0}.linee h3{font:700 30px 'Archivo Narrow';text-transform:uppercase;margin:0 0 6px}
-.negozio{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:28px;border-top:1px solid var(--riga);align-items:center}.negozio img{aspect-ratio:4/5}
+.negozio{display:grid;grid-template-columns:280px 1fr;gap:24px;padding:28px;border-top:1px solid var(--riga);align-items:center}.negozio img{aspect-ratio:4/5}
 .dove{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--riga);background:var(--ink);color:#f5eee6}.dove>div{padding:30px}.dove .map{background:#33302d;display:grid;place-items:center;color:#aaa;min-height:220px}
 .btn{display:inline-block;background:var(--rosso);color:#fff;padding:11px 18px;font-weight:700}
 @media(max-width:860px){
  .app{display:block}.rail{display:none}
+ .brand{display:flex;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid var(--riga)}.brand img{width:96px;height:96px;flex:none}.brand b{font:700 24px/1.05 'Archivo Narrow',sans-serif;text-transform:uppercase}
  .chips{display:flex;gap:8px;overflow-x:auto;position:sticky;top:0;z-index:9;background:#fff;border-bottom:1px solid var(--riga);padding:10px 12px;align-items:center}
  .chips img{width:34px;height:34px;flex:none}.chips a{flex:none;border:1px solid var(--riga);padding:6px 12px;font:700 13px 'Archivo Narrow';text-transform:uppercase}
  .bento{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:44vw}.bento a:nth-child(n){grid-column:auto;grid-row:auto}.bento a:nth-child(1){grid-column:1/3;grid-row:span 2}
  .fam header{grid-template-columns:44px 1fr;padding:16px}.fam header p{grid-column:2}.fam header .n{font-size:30px}.fam header h2{font-size:26px}
  .mod{grid-template-columns:1fr 1fr;grid-template-rows:auto}.mod .lead,.mod .lead.w{grid-column:1/3;grid-row:auto;aspect-ratio:1}.mod .s{aspect-ratio:1;min-height:auto}.bento a:nth-child(6){grid-column:1/3}.mod .lead.w{aspect-ratio:3/2}
- .linee,.dove{grid-template-columns:1fr}.linee div{border-right:0;border-bottom:1px solid var(--riga)}.negozio{grid-template-columns:110px 1fr;padding:16px}}
+ .linee,.dove{grid-template-columns:1fr}.linee div{border-right:0;border-bottom:1px solid var(--riga)}.negozio{grid-template-columns:140px 1fr;padding:16px}}
 </style></head><body>
 <div class="app">
-<aside class="rail"><img class="logo" src="../img/logo_web_320.png" alt="Logo 5 Rosso Casa"><h1>Tutto per la casa, in sei famiglie.</h1>
+<aside class="rail"><img class="logo" src="../img/logo_5rossocasa_hand2_web.png" alt="Logo 5 Rosso Casa"><h1>Tutto per la casa, in sei famiglie.</h1>
 <ol><li><a href="#f1"><span>01</span>Tavola</a></li><li><a href="#f2"><span>02</span>Cucina</a></li><li><a href="#f3"><span>03</span>Dispensa e vetro</a></li><li><a href="#f4"><span>04</span>Tessili</a></li><li><a href="#f5"><span>05</span>Ingresso</a></li><li><a href="#f6"><span>06</span>Regali e dettagli</a></li><li><a href="#linee"><span>+</span>Le due linee</a></li><li><a href="#dove"><span>→</span>Dove siamo</a></li></ol>
 <div class="hrs"><b>5 Rosso Casa · Firenze</b><br>Lun–ven 9–13 · 16:30–19:30<br>Sab 9–13</div></aside>
 <main>
-<div class="chips"><img src="../img/logo_web_320.png" alt="Logo" style="height:34px"><a href="#f1">01 Tavola</a><a href="#f2">02 Cucina</a><a href="#f3">03 Dispensa</a><a href="#f4">04 Tessili</a><a href="#f5">05 Ingresso</a><a href="#f6">06 Regali</a><a href="#dove">Dove</a></div>
+<div class="brand"><img src="../img/logo_5rossocasa_hand2_web.png" alt="Logo 5 Rosso Casa"><b>Tutto per la casa, in sei famiglie.</b></div>
+<div class="chips"><img src="../img/logo_5rossocasa_hand2_web.png" alt="Logo" style="height:34px"><a href="#f1">01 Tavola</a><a href="#f2">02 Cucina</a><a href="#f3">03 Dispensa</a><a href="#f4">04 Tessili</a><a href="#f5">05 Ingresso</a><a href="#f6">06 Regali</a><a href="#dove">Dove</a></div>
 <div class="bento">
 <a href="#f2"><img src="../img/hh_bollitori_rosso_grigio.jpg" alt="Bollitori rosso e grigio"><b>Cucina</b></a>
 <a href="#f1"><img src="../img/mosaico_bicchieri_rossi.jpg" alt="Bicchieri rossi in vetro"><b>Tavola</b></a>
