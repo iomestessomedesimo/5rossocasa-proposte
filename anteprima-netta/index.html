@@ -109,13 +109,18 @@ footer b{color:var(--oro);font-weight:600}
 }
 .kit{align-items:stretch}.kc{display:grid;grid-template-rows:auto 1fr;gap:14px;min-height:0}.kc .kf{min-height:0}.kc .kf img{position:absolute;inset:0}.hm{display:none}
 @media(max-width:900px){.hm{display:grid;order:4;grid-template-columns:1fr 1fr;gap:10px;padding:22px clamp(18px,4vw,48px) 0}.hero .sub{order:5}.hero .chips{order:6}}
-.logo,.nav{transition:transform .28s ease,opacity .28s ease}@media(max-width:1100px){body.hid .logo,body.hid .nav{transform:translateY(-130%);opacity:0;pointer-events:none}}
+@media(max-width:600px){.hc{max-width:none;min-width:0;width:100%;margin:0;padding:0 clamp(18px,4vw,48px)}}
+.nav{transition:transform .28s ease,opacity .28s ease}@media(max-width:1100px){body.hid .nav{transform:translateY(-130%);opacity:0;pointer-events:none}}
 /* annuncio aperture dicembre */
-.ann{position:relative;isolation:isolate;background:#a10e1a;color:#fff;text-align:center;padding:84px clamp(18px,4vw,48px) 26px;border-bottom:1px solid #c8a76266}
+.ann{position:relative;isolation:isolate;background:#a10e1a;color:#fff;text-align:center;border-bottom:1px solid #c8a76266}
 .ann p{margin:0}.ann-t{font:800 clamp(28px,8.4vw,64px)/1.04 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:.01em}
 .ann-s{font:italic 400 clamp(19px,5vw,27px)/1.3 Newsreader,Georgia,serif;margin:10px 0 16px!important}
 .ann-h{display:inline-block;background:#fff;color:#a10e1a;font:800 clamp(36px,11vw,76px)/1 'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:.01em;padding:.14em .55em;border-radius:999px;white-space:nowrap}
-@media(min-width:901px){.ann{padding:76px 190px 30px}.ann-t{font-size:clamp(34px,4.6vw,64px)}.ann-s{font-size:clamp(20px,2vw,27px)}.ann-h{font-size:clamp(40px,5vw,76px)}}
+.ann.top{padding:64px 14px 6px}
+.ann.top .ann-t{font-size:clamp(18px,5.6vw,24px);line-height:1.1}
+.ann.top .ann-s{font-size:clamp(13px,3.6vw,16px);line-height:1.25;margin:2px 0 6px!important}
+.ann.top .ann-h{font-size:clamp(22px,6.6vw,30px)}
+@media(min-width:1101px){.ann.top{height:112px;padding:62px 150px 0;display:flex;align-items:center;justify-content:center;gap:clamp(16px,2vw,34px)}.ann.top .ann-t{order:1;font-size:clamp(22px,2.3vw,34px);white-space:nowrap}.ann.top .ann-h{order:2;font-size:clamp(22px,2.1vw,30px)}.ann.top .ann-s{order:3;font-size:clamp(13px,1.15vw,18px);white-space:nowrap;margin:0!important}}
 .ann.bot{padding:22px 18px 24px;border:1px solid #ffffff33;border-radius:10px;margin:4px 0}
 .ann.bot .ann-t{font-size:clamp(26px,3vw,40px)}.ann.bot .ann-s{font-size:clamp(18px,1.7vw,22px);margin:8px 0 14px!important}.ann.bot .ann-h{font-size:clamp(34px,3.6vw,50px)}
 @media(max-width:900px){.ann.bot .ann-t{font-size:clamp(26px,7.4vw,40px)}.ann.bot .ann-h{font-size:clamp(34px,10vw,50px)}}
@@ -125,7 +130,7 @@ footer b{color:var(--oro);font-weight:600}
 <a class="logo" href="#top"><img src="../img/logo_5rossocasa_hand2_web.png" alt="Logo 5 Rosso Casa"></a>
 <div class="nav"><a class="l" href="#c-cucina">Cucina</a><a class="l" href="#c-tavola">Tavola</a><a class="l" href="#c-tessili">Tessili</a><a class="l" href="#c-ingresso">Zerbini</a><a class="l g" href="#c-regali">Regali</a><a class="l" href="#dove">Dove siamo</a><div class="soc"><a class="ic" href="https://www.instagram.com/5rosso_casa_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram di 5 Rosso Casa" title="Instagram di 5 Rosso Casa"><svg aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a><a class="ic" href="https://www.facebook.com/5rossoflorence" target="_blank" rel="noopener noreferrer" aria-label="Facebook di 5 Rosso Casa" title="Facebook di 5 Rosso Casa"><svg aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a><a class="ic" href="https://wa.me/393470493220" target="_blank" rel="noopener noreferrer" aria-label="Scrivici su WhatsApp" title="Scrivici su WhatsApp"><svg aria-hidden="true" focusable="false"><use href="#i-wa"/></svg></a></div></div>
 
-<section class="ann" aria-label="Aperture di dicembre"><p class="ann-t">A DICEMBRE SEMPRE APERTI</p><p class="ann-s">Tutti i giorni, sabato e domenica inclusi</p><p class="ann-h">9–13 / 16–19</p></section>
+<section class="ann top" aria-label="Aperture di dicembre"><p class="ann-t">A DICEMBRE SEMPRE APERTI</p><p class="ann-s">Tutti i giorni, sabato e domenica inclusi</p><p class="ann-h">9–13 / 16–19</p></section>
 <header class="hero" id="top"><div class="wrap">
  <div>
   <p class="kick">5 Rosso Casa · Firenze · Natale 2026</p>
